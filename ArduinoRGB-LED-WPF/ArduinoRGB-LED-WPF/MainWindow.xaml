@@ -1,0 +1,21 @@
+﻿<Window x:Class="ArduinoRGB_LED_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Arduino RGB LED" Height="350" Width="525">
+    <StackPanel Margin="10">
+        <Label HorizontalAlignment="Center" FontSize="24" Background="White" Foreground="#FF404040">Arduino RGB LED</Label>
+        <DockPanel>
+            <Label x:Name="RedLabel" DockPanel.Dock="Left" Content="Red LED: " />
+            <Slider x:Name="RedSlider" DockPanel.Dock="Right" VerticalAlignment="Center" Maximum="255" SmallChange="1" Value="128" ValueChanged="RedSlider_ValueChanged"></Slider>
+        </DockPanel>
+        <DockPanel>
+            <Label x:Name="BlueLabel" DockPanel.Dock="Left" Content="Blue LED: " />
+            <Slider x:Name="BlueSlider" DockPanel.Dock="Right" VerticalAlignment="Center" Maximum="255" SmallChange="1" Value="128" ValueChanged="BlueSlider_ValueChanged"></Slider>
+        </DockPanel>
+        <DockPanel>
+            <Label x:Name="GreenLabel" DockPanel.Dock="Left" Content="Green LED: " />
+            <Slider x:Name="GreenSlider" DockPanel.Dock="Right" VerticalAlignment="Center" Maximum="255" SmallChange="1" Value="128" ValueChanged="GreenSlider_ValueChanged"></Slider>
+        </DockPanel>
+        <Rectangle x:Name="ColorDisplay" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Fill="Red" Height="1790"/>
+    </StackPanel>
+</Window>
